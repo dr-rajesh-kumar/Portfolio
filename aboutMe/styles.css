@@ -1,0 +1,429 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  background-color: #f9f9f9;
+    box-sizing: border-box;
+
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #0690cd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  height: 7vh;
+}
+
+.navbar-container {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 100%;
+  gap: 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Vertically center menu items */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.menu li {
+  position: relative;
+}
+.menu li:last-child {
+  margin-right: 15px;
+}
+
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 30px;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  margin: 0 10px;
+}
+
+.menu a:hover {
+  background-color: #047bb0;
+  border-radius: 5px;
+}
+.menu a.active{
+  background-color: #047bb0;
+  border-radius: 5px;
+}
+
+
+/* Dropdown Menu */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown Menu Styling */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-top: 6px;
+  top: 100%;
+  left: 0;
+  background-color: white;  /* White background */
+  color: black;             /* Black text */
+  width: 180px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 10px 0;  /* Adds padding between the items */
+}
+
+.dropdown-content a {
+  display: block;          /* Make each item take a full line */
+  padding: 12px 20px;      /* Add padding around each item */
+  color: black;            /* Black text */
+  text-decoration: none;   /* Remove underlines */
+  font-size: 14px;         /* Adjust font size */
+  transition: background-color 0.3s ease;  /* Smooth transition for hover */
+}
+
+.dropdown-content a:hover {
+  background-color: #f96b39;  /* Orange highlight on hover */
+  color: white;                /* Change text to white on hover */
+  border-radius: 5px;
+}
+
+/*Submenu wrapper*/ 
+.dropdown-sub {
+  position: relative;
+}
+/* Hidden submenu */
+.dropdown-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Pushes it to the right of parent */
+  background-color: white;
+  width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+/* Show submenu on hover */
+.dropdown-sub:hover .dropdown-submenu {
+  display: block;
+}
+
+/* Style submenu links */
+.dropdown-submenu a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-submenu a:hover {
+  background-color: #f96b39;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+
+  .dropdown-content {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .dropdown-content a {
+    padding: 12px 10px;
+  }
+}
+
+/* Styling for the image below the navbar */
+.image-container {
+    position: relative;
+    width: 100%;
+    padding: 0;            /* Remove any default padding/margin */
+    margin: 0;             /* Remove any default margin */
+}
+
+.below-navbar-image {
+    width: 100%;           /* Ensure the image takes up the full container width */
+    height: auto;          /* Keep the aspect ratio intact */
+    display: block; 
+    margin: 0;       /* Remove any inline-block or extra spacing */
+}
+.overlay {
+    position: absolute;  /* Position it relative to the image container */
+    top: 50%;            /* Centers the div vertically */
+    left: 50%;           /* Centers the div horizontally */
+    transform: translate(-50%, -50%);  /* Adjusts position to be perfectly centered */
+    background: #81c5e31f; /* Semi-transparent black background */
+    backdrop-filter: blur(10px); /* Blurry background effect */
+    padding: 20px 60px;  /* Padding around the text */
+    border-radius: 16px;  /* Optional: rounded corners for the div */
+    width: auto;         /* You can specify a fixed width if needed */
+}
+
+.overlay-text {
+    font-size: 48px;      /* Text size */
+    color: white;         /* White text */
+    font-weight: bold;    /* Optional: Make the text bold */
+    text-align: center;   /* Centers the text inside the div */
+}
+
+/* Styling for the image below the navbar */
+.image-container {
+  position: relative;
+  width: 100%;
+  padding: 0; /* Remove any default padding/margin */
+  margin: 0;  /* Remove any default margin */
+}
+
+/* For the image below the navbar */
+.below-navbar-image {
+  width: 100%;           /* Ensure the image takes up the full container width */
+  height: auto;          /* Keep the aspect ratio intact */
+  display: block;        /* Remove any inline-block or extra spacing */
+  margin: 0;             /* Remove any margin around the image */
+}
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto:400,700");
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0em;
+}
+.timeline-item h1{
+  margin-left: 10px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  margin: 0em;
+}
+
+.container {
+  max-width: 1024px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.timeline-item {
+  padding: 2.1em 0em 1em 0em;
+  position: relative;
+  color: rgba(0, 0, 0, 0.7);
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  padding: 0 20px 0px 25px;
+}
+
+.timeline-item::before {
+  content: attr(date-is);
+  position: absolute;
+  left: 2em;
+  text-decoration: underline;
+  font-weight: bold;
+  top: 1em;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.timeline-item::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 1em;
+  position: absolute;
+  left: -7px;
+  border-radius: 10px;
+  content: "";
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  background: white;
+}
+
+.timeline-item:last-child {
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.container > h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  text-decoration: underline;
+  margin: 0em auto 1em auto;
+}
+
+.fading-separator {
+  height: 1.5px;
+  width: 100%;
+  margin: 40px 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0)
+  );
+}
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 0rem auto 2rem auto;
+  width: 90%;
+}
+
+
+.flex-wrapper > .container {
+  flex: 1 1 50%; /* take up 50% each */
+  box-sizing: border-box;
+  padding: 0.5rem 2rem;
+  background-color: #e3e7ed;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(6, 144, 205, 0.15);
+  border-left: none;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+  .flex-wrapper {
+    flex-direction: column;
+  }
+  .flex-wrapper > .container {
+    flex: 1 1 100%;
+  }
+}
+
+.more-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.center-box {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  text-align: center;
+  max-width: 80%;
+  width: 80%;
+}
+.more-details-about{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+}
+.center-box-about{
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  text-align: center;
+  max-width: 80%;
+  width: 80%;
+}
+.center-box-about p{
+  font-size: 0.9rem;
+}
+.about-text {
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.centered-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  text-decoration: underline;
+  color: #f96b39;
+  margin: 30px 0px 5px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.details-list {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  padding-left: 20px;
+  margin: 0;
+}
