@@ -204,8 +204,9 @@ body {
     left: 50%;           /* Centers the div horizontally */
     transform: translate(-50%, -50%);  /* Adjusts position to be perfectly centered */
     background: #81c5e31f; /* Semi-transparent black background */
-    backdrop-filter: blur(10px); /* Blurry background effect */
+    backdrop-filter: blur(3px); /* Blurry background effect */
     padding: 20px 60px;  /* Padding around the text */
+    border: 2px solid #93c6dc; /* Border color */
     border-radius: 16px;  /* Optional: rounded corners for the div */
     width: auto;         /* You can specify a fixed width if needed */
 }
